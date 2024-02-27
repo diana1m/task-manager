@@ -60,5 +60,6 @@ export const useTaskStore = defineStore('task', {
         this.tasks[taskIndex].categoryId = newCategoryId
       }
     }
-  }
+  },
+  persist: true
 })
