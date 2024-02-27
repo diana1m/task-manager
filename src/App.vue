@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Card from './components/Card.vue'
+import AddingForm from './components/AddingForm.vue';
+import TaskCollum from './components/TaskCollum.vue';
 </script>
 
 <template>
@@ -7,10 +8,10 @@ import Card from './components/Card.vue'
   </header>
 
   <main>
-    <Card/>
+    <AddingForm/>
+    <div class="tasksWrapper">
+<TaskCollum />
+    </div>
   </main>
 </template>
 
-<style scoped>
-
-</style>
