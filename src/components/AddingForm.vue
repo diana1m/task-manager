@@ -42,6 +42,7 @@
   const onFinish = (values: any) => {
     addTask(formState.task)
     formState.task=''
+    console.log(values)
   };
   
   const onFinishFailed = (errorInfo: any) => {

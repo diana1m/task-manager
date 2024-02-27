@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import AddingForm from './components/AddingForm.vue';
-import TaskCollum from './components/TaskCollum.vue';
+import AddingForm from './components/AddingForm.vue'
+import TaskColumn from './components/TaskColumn.vue'
 </script>
 
 <template>
-  <header>
-  </header>
+  <header></header>
 
   <main>
-    <AddingForm/>
+    <AddingForm />
     <div class="tasksWrapper">
-<TaskCollum />
+      <TaskColumn />
     </div>
   </main>
 </template>
-
