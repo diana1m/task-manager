@@ -25,7 +25,7 @@
 import { defineComponent } from 'vue'
 import TaskCard from './TaskCard.vue'
 import { useTaskStore } from '../stores/task'
-import type ITask from '@/interfaces/ITask'
+import type ITask from '../interfaces/ITask'
 
 export default defineComponent({
   name: 'App',

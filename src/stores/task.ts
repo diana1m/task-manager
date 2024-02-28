@@ -25,7 +25,7 @@
 // })
 
 import { defineStore } from 'pinia'
-import type ITask from '@/interfaces/ITask'
+import type ITask from '../interfaces/ITask'
 
 export const useTaskStore = defineStore('task', {
   state: () => ({

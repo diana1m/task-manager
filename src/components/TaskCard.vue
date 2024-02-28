@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTaskStore } from '../stores/task'
 import { DeleteOutlined } from '@ant-design/icons-vue';
-import type ITask from '@/interfaces/ITask';
+import type ITask from '../interfaces/ITask';
 
 const props = defineProps<{
   taskCard: ITask
