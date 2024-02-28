@@ -32,7 +32,6 @@ export default defineComponent({
   components: { TaskCard },
   setup() {
     const taskStore = useTaskStore()
-    
 
     function onDragStart(e: DragEvent, task: ITask) {
       if (e.dataTransfer) {
@@ -44,8 +43,8 @@ export default defineComponent({
 
     function onDrop(e: DragEvent, categoryId: number) {
       if (e.dataTransfer) {
-      const taskId = e.dataTransfer.getData('taskId')
-      taskStore.moveTaskToCategory(taskId, categoryId)
+        const taskId = e.dataTransfer.getData('taskId')
+        taskStore.moveTaskToCategory(taskId, categoryId)
       }
     }
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTaskStore } from '../stores/task'
-import { DeleteOutlined } from '@ant-design/icons-vue';
-import type ITask from '../interfaces/ITask';
+import { DeleteOutlined } from '@ant-design/icons-vue'
+import type ITask from '../interfaces/ITask'
 
 const props = defineProps<{
   taskCard: ITask
@@ -14,9 +14,9 @@ const { deleteTask } = store
 <template>
   <div class="cardBox">
     <p>{{ taskCard.text }}</p>
-    <a-button class="button" @click="() => deleteTask(taskCard.id)"  danger>
-        <delete-outlined/>
-        Delete
+    <a-button class="button" @click="() => deleteTask(taskCard.id)" danger>
+      <delete-outlined />
+      Delete
     </a-button>
   </div>
 </template>
