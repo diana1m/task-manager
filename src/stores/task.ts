@@ -25,16 +25,11 @@
 // })
 
 import { defineStore } from 'pinia'
-
-interface Task {
-  id: string
-  text: string
-  categoryId: number
-}
+import type ITask from '@/interfaces/ITask'
 
 export const useTaskStore = defineStore('task', {
   state: () => ({
-    tasks: [] as Task[],
+    tasks: [] as ITask[],
     categories: [
       { id: 0, title: 'To do' },
       { id: 1, title: 'In progress' },
@@ -48,7 +43,7 @@ export const useTaskStore = defineStore('task', {
   },
   actions: {
     addTask(text: string) {
-      const newTask: Task = { id: String(Math.random()), text, categoryId: 0 }
+      const newTask: ITask = { id: String(Math.random()), text, categoryId: 0 }
       this.tasks.push(newTask)
     },
     deleteTask(id: string) {
