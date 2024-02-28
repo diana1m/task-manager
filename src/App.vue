@@ -4,12 +4,17 @@ import TaskColumn from './components/TaskColumn.vue'
 </script>
 
 <template>
-  <header></header>
-
+  <a-config-provider
+    :theme="{
+      token: {
+        colorPrimary: '#00b96b',
+      },
+    }"
+  > 
   <main>
     <AddingForm />
-    <div class="tasksWrapper">
-      <TaskColumn />
-    </div>
+    <TaskColumn />
   </main>
+</a-config-provider>
+  
 </template>

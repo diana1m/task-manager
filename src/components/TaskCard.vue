@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { useTaskStore } from '../stores/task'
+import { DeleteOutlined } from '@ant-design/icons-vue';
+import type ITask from '@/interfaces/ITask';
 
-interface Task {
-  id: string
-  text: string
-  categoryId: number
-}
 const props = defineProps<{
-  taskCard: Task
+  taskCard: ITask
 }>()
 
 const store = useTaskStore()
@@ -17,7 +14,10 @@ const { deleteTask } = store
 <template>
   <div class="cardBox">
     <p>{{ taskCard.text }}</p>
-    <button class="button" @click="() => deleteTask(taskCard.id)">Delete</button>
+    <a-button class="button" @click="() => deleteTask(taskCard.id)"  danger>
+        <delete-outlined/>
+        Delete
+    </a-button>
   </div>
 </template>
 
@@ -27,11 +27,15 @@ const { deleteTask } = store
   gap: 8px;
   justify-content: space-between;
   align-items: center;
+
   border-radius: 5px;
-  background-color: #f5f5f5;
   padding: 10px;
-  cursor: move;
+  padding-left: 20px;
   margin-bottom: 10px;
+  width: 100%;
+
+  background-color: #cfe9d7;
+  cursor: move;
 }
 .button {
   cursor: pointer;
@@ -39,7 +43,9 @@ const { deleteTask } = store
   gap: 5px;
   align-items: center;
 }
+
 p {
   margin: 0;
+  color: #262f25;
 }
 </style>

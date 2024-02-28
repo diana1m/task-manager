@@ -52,7 +52,7 @@
   
 <style scoped>
 .input {
-    width: 300px;
+    width: 270px;
 }
 .form {
  margin-bottom: 40px;
