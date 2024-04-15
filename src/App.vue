@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import AddingForm from './components/AddingForm.vue'
-import TaskColumn from './components/TaskColumn.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <a-config-provider
@@ -12,8 +9,7 @@ import TaskColumn from './components/TaskColumn.vue'
     }"
   >
     <main>
-      <AddingForm />
-      <TaskColumn />
+      <RouterView />
     </main>
   </a-config-provider>
 </template>
